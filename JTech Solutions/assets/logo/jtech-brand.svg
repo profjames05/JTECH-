@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">JTech Solutions</title><desc id="desc">Circuit-inspired cyan and violet JTECH SOLUTIONS logo with the tagline Technology. Innovation. Solutions.</desc>
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06d6f5"/><stop offset=".52" stop-color="#0878ff"/><stop offset="1" stop-color="#982cff"/></linearGradient>
+    <linearGradient id="word" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#08d5f2"/><stop offset=".52" stop-color="#3786ff"/><stop offset="1" stop-color="#aa36ff"/></linearGradient>
+  </defs>
+  <rect width="1200" height="360" rx="30" fill="#07152c"/>
+  <g transform="translate(18 14)">
+    <path d="M72 24h156v38h-95v115c0 86-45 143-127 143-60 0-105-33-122-86l35-29c14 43 39 66 79 66 52 0 80-36 80-96V24Z" transform="translate(168 0) scale(.78)" fill="url(#brand)"/>
+    <path d="M199 73h83l-34 20h-48M199 105h112l-20 19h-92M199 137h88l-20 19h-68M199 169h73l-20 19h-53" fill="none" stroke="url(#brand)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="292" cy="83" r="8" fill="#08d5f2"/><circle cx="319" cy="114" r="8" fill="#159cff"/><circle cx="294" cy="146" r="8" fill="#6e4cff"/><circle cx="278" cy="178" r="8" fill="#a32cff"/>
+    <text x="370" y="190" fill="#f6f9ff" font-family="Arial,Helvetica,sans-serif" font-size="142" font-weight="800" letter-spacing="5">JTECH</text>
+    <path d="M382 224h46M1040 224h46" stroke="url(#word)" stroke-width="8" stroke-linecap="round"/>
+    <text x="458" y="238" fill="#edf3ff" font-family="Arial,Helvetica,sans-serif" font-size="49" font-weight="700" letter-spacing="19">SOLUTIONS</text>
+    <text x="382" y="298" fill="url(#word)" font-family="Arial,Helvetica,sans-serif" font-size="30" letter-spacing="2">Technology. Innovation. Solutions.</text>
+  </g>
+</svg>

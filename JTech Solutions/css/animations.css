@@ -1,0 +1,79 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal.fade-left {
+  transform: translateX(32px);
+}
+
+.reveal.fade-right {
+  transform: translateX(-32px);
+}
+
+.reveal.fade-left.is-visible,
+.reveal.fade-right.is-visible {
+  transform: translateX(0);
+}
+
+.technology-layout .technology-illustration.reveal.fade-left,
+.technology-layout .technology-illustration.reveal.fade-left.is-visible {
+  transform: translateX(0);
+}
+
+
+.reveal.slide-left {
+  transform: translateX(-20px);
+}
+
+.reveal.slide-left.is-visible {
+  transform: translateX(0);
+}
+
+@media (max-width: 720px) {
+  .reveal.fade-left,
+  .reveal.fade-right,
+  .reveal.fade-left.is-visible,
+  .reveal.fade-right.is-visible,
+  .reveal.slide-left,
+  .reveal.slide-left.is-visible {
+    transform: translateY(0);
+  }
+}
+
+.delay-1 { transition-delay: 0.08s; }
+.delay-2 { transition-delay: 0.16s; }
+.delay-3 { transition-delay: 0.24s; }
+.delay-4 { transition-delay: 0.32s; }
+.delay-5 { transition-delay: 0.4s; }
+
+.floating-card {
+  animation: float 6s ease-in-out infinite;
+}
+
+.card-two {
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .floating-card {
+    animation: none;
+  }
+}
