@@ -71,6 +71,8 @@ python -m http.server 8000
 
 Then open `http://localhost:8000`.
 
+You can also preview the site with the VS Code Live Server extension. No build step or package installation is required.
+
 ## How to Customize Company Information
 
 Edit the configuration inside `js/main.js`:
@@ -83,7 +85,7 @@ const siteConfig = {
   email: 'info@jtechsolutions.com',
   phone: '+233598815100',
   whatsapp: '+233598385533',
-  website: 'https://example.com',
+  website: '',
   social: {
     facebook: '',
     instagram: '',
@@ -95,7 +97,7 @@ const siteConfig = {
 };
 ```
 
-Update the values to match the real company contact details, social media links, and website URL before deployment.
+Update the values to match the real company contact details and social media links before deployment. The static contact form opens a pre-filled email draft addressed to `info@jtechsolutions.com`; change that address in `js/contact.js` if needed.
 
 ## How to Add Projects
 
@@ -116,21 +118,22 @@ Add or remove items as needed to expand the portfolio.
 
 Services are defined in `js/main.js` in the `services` array. Update the content to reflect new offerings or change existing descriptions.
 
-## GitHub Pages Deployment
+## GitHub Upload and Pages Deployment
 
-This site is static and compatible with GitHub Pages.
+This repository is a complete static site. It has no build step, server, database, API keys, or `node_modules` requirement, so it can be uploaded directly to GitHub.
 
-1. Push the project to a GitHub repository.
-2. In GitHub, open the repository.
-3. Go to Settings > Pages.
-4. Set the source to the root branch or a docs folder if you choose that structure.
-5. Publish the site.
+1. Create a new GitHub repository. Use the repository name you want for the site URL.
+2. Upload the contents of this folder, keeping the HTML files at the repository root.
+3. Open the repository's **Settings > Pages**.
+4. Under **Build and deployment**, choose **Deploy from a branch**.
+5. Select the default branch and the `/ (root)` folder, then select **Save**.
+6. Wait for GitHub to publish the site, then open the Pages URL shown in the same screen.
 
-Use relative paths and keep the HTML files at the root for proper static hosting.
+Use the repository root rather than a nested project folder. All page, stylesheet, script, image, and icon references use relative paths for GitHub Pages compatibility.
 
 ## Connecting a Backend Later
 
-The contact form is prepared for backend integration. In `js/contact.js`, locate the form submission logic and replace the placeholder success flow with an API request such as:
+The contact form works on GitHub Pages by opening a pre-filled email draft. If you later connect a backend or form service, replace the `mailto:` flow in `js/contact.js` with an API request such as:
 
 ```js
 fetch('https://your-api-endpoint.com/contact', {

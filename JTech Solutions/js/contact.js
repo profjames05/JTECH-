@@ -45,8 +45,18 @@ document.addEventListener('DOMContentLoaded', () => {
       message
     };
 
-    console.info('Contact form payload ready for backend integration:', payload);
-    showStatus('Your enquiry has been prepared successfully. Connect this form to your backend or email service to send it.', true);
-    contactForm.reset();
+    const subject = encodeURIComponent(`New enquiry from ${fullName}`);
+    const body = encodeURIComponent([
+      `Name: ${fullName}`,
+      `Email: ${email}`,
+      `Phone: ${payload.phone || 'Not provided'}`,
+      `Company/Organization: ${payload.company || 'Not provided'}`,
+      `Service: ${payload.service || 'Not specified'}`,
+      '',
+      message
+    ].join('\n'));
+
+    window.location.href = `mailto:info@jtechsolutions.com?subject=${subject}&body=${body}`;
+    showStatus('Your email app is opening with the enquiry details ready to send.', true);
   });
 });

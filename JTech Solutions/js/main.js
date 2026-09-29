@@ -5,7 +5,7 @@ const siteConfig = {
   email: 'info@jtechsolutions.com',
   phone: '+233598815100',
   whatsapp: '+233598385533',
-  website: 'https://example.com',
+  website: '',
   social: {
     facebook: '',
     instagram: '',
